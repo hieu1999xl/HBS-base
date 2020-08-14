@@ -27,16 +27,11 @@ app.listen(3000, () => {
     console.log("app listen 300000000")
 })
 app.get("/", (request, response) => {
-    // console.log(request.query.author)
-    response.render('home');
+    console.log(request.query.author)
+    response.render('search');
 })
 
-app.get("/login", (request, response) => {
-    // console.log(request.query.author)
-    response.render('login');
+app.post("/home", (request, response) => {
+    console.log(request.body)
+    response.send('');
 })
-
-// app.post("/home", (request, response) => {
-//     console.log(request.body)
-//     response.send('');
-// })
